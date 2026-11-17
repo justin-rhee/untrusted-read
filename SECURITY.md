@@ -14,10 +14,12 @@ promise the code can't keep.
 
 ## Validation status
 
-<State plainly whether this tool's tests / red-team corpus have been RUN, and
-link the results. An unrun corpus is disclosed here, in the open. never hidden
-behind a "tested" claim. Disclosure does not transfer the duty; run it before
-you rely on it.>
+The offline test suite has been run: 39 checks pass, 0 fail, across two Python
+suites (`python3 tests/test_scrub.py`, 21 checks, and
+`python3 tests/test_label_hook.py`, 18 checks). They check the scrubber and the
+label hook on fixed inputs. They do not cover input shapes I did not think to
+write, a live agent session, or how a model behaves when it reads scrubbed
+text. There is no separate red-team corpus.
 
 ## Reporting a vulnerability
 
